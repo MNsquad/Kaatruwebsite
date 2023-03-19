@@ -1,0 +1,67 @@
+.switch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+  }
+  
+  .switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 70px;
+    border-radius: 20px;
+    background-color: #ccc;
+    position: relative;
+    transition: background-color 0.2s ease;
+  }
+  
+  .switch:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 5px;
+    left: 5px;
+    transition: transform 0.2s ease;
+  }
+  
+  .switch.on {
+    background-color: skyblue;
+  }
+  
+  .switch.on:before {
+    transform: translateX(40px);
+  }
+  
+  .switch.off .off {
+    opacity: 1;
+  }
+  
+  .switch.on .on {
+    opacity: 1;
+  }
+  
+  .switch-label {
+    position: absolute;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .switch-label.on {
+    left: 10px;
+  }
+  
+  .switch-label.off {
+    right: 10px;
+  }
+  
